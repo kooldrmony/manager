@@ -1,10 +1,30 @@
 import React, { Component } from 'react';
-import { Card } from './common';
+import { Card, CardSection, Input, Button } from './common';
 
-export LoginForm extends Component {
+class LoginForm extends Component {
 	render() {
 		return (
 			<Card>
+				<CardSection>
+					<Input
+						label="email"
+						placeholder="email@gmail.com"
+					/>
+				</CardSection>
+
+				<CardSection>
+					<Input
+						secureTextEntry
+						label="Password"
+						placeholder="Password"
+					/>
+				</CardSection>
+
+				<CardSection>
+					<Button>
+						Login
+					</Button>
+				</CardSection>
 			</Card>
 			)
 	}
