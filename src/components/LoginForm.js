@@ -24,7 +24,7 @@ class LoginForm extends Component {
 	renderError() {
 		if (this.props.error) {
 			return (
-				<View style={{backGroundColor: 'white'}}>
+				<View style={{backgroundColor: 'white'}}>
 					<Text style={styles.errorTextStyle}>
 						{this.props.error}
 					</Text>
