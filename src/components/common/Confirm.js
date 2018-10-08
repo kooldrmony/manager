@@ -3,7 +3,7 @@ import { Text, View, Modal } from 'react-native';
 import { CardSection } from './CardSection';
 import { Button } from './Button';
 
-const Confirm = ({ children }) => {
+const Confirm = ({ children, visible, onAccept, onDecline }) => {
 	const { textStyle, cardSectionStyle, containerStyle } = styles;
 
 	return(
