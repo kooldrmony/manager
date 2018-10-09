@@ -16,7 +16,7 @@ class EmployeeEdit extends Component {
 
 	componentWillMount() {
 		_.each(this.props.employee, (value, prop) => {
-			this.props.employeeUdate({ prop, value });
+			this.props.employeeUpdate({ prop, value });
 		});
 	}
 
@@ -46,7 +46,7 @@ class EmployeeEdit extends Component {
 	render() {
 		return(
 			<Card>
-				<Employeeform />			
+				<EmployeeForm />			
 				<CardSection>
 					<Button onPress={this.onButtonPress.bind(this)}>
 						Save Changes
