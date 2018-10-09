@@ -4,6 +4,10 @@ import { CardSection } from './common';
 import { Actions } from 'react-native-router-flux';
 
 class ListItem extends Component {
+	constructor() {
+		super();
+		this.onRowPress = this.onRowPress.bind(this)
+	}
 
 	onRowPress() {
 		Actions.employeeEdit({ employee: this.props.employee });
@@ -12,7 +16,7 @@ class ListItem extends Component {
 		const { name } = this.props.employee;
 
 		return(
-			<TouchableWithoutFeedback onPress={this.onRowPress.bind(this)}>
+			<TouchableWithoutFeedback onPress={this.onRowPress}>
 				<View>
 					<CardSection>
 						<Text style={styles.titleStyle}>

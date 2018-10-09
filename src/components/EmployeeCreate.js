@@ -7,6 +7,10 @@ import { Card, CardSection, Input, Button } from './common';
 import EmployeeForm from './EmployeeForm';
 
 class EmployeeCreate extends Component {
+	constructor() {
+		super();
+		this.onButtonPress = this.onButtonPress.bind(this)
+	}
 	onButtonPress() {
 		const { name, phone, shift } = this.props;
 
@@ -20,7 +24,7 @@ class EmployeeCreate extends Component {
 			<Card>
 				<EmployeeForm {...this.props} />
 				<CardSection>
-					<Button onPress={this.onButtonPress.bind(this)}>
+					<Button onPress={this.onButtonPress}>
 						Create
 					</Button>
 				</CardSection>

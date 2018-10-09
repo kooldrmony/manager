@@ -12,6 +12,10 @@ class EmployeeEdit extends Component {
 	this.state = {
 		showModal: false
 	};
+	this.onButtonPress = this.onButtonPress.bind(this)
+	this.onTextPress = this.onTextPress.bind(this)
+	this.onAccept = this.onAccept.bind(this)
+	this.onDecline = this.onDecline.bind(this)
 }
 
 	componentWillMount() {
@@ -48,13 +52,13 @@ class EmployeeEdit extends Component {
 			<Card>
 				<EmployeeForm />			
 				<CardSection>
-					<Button onPress={this.onButtonPress.bind(this)}>
+					<Button onPress={this.onButtonPress}>
 						Save Changes
 					</Button>
 				</CardSection>
 
 				<CardSection>
-					<Button onPress={this.onTextPress.bind(this)}>
+					<Button onPress={this.onTextPress}>
 						Text Schedule
 					</Button>
 				</CardSection>
@@ -67,8 +71,8 @@ class EmployeeEdit extends Component {
 
 				<Confirm
 					visible={this.state.showModal}
-					onAccept={this.onAccept.bind(this)}
-					onDecline={this.onDecline.bind(this)}
+					onAccept={this.onAccept}
+					onDecline={this.onDecline}
 				>
 					Are you sure you want to delete this employee?
 				</Confirm>
