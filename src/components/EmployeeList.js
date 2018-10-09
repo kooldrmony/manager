@@ -6,6 +6,10 @@ import _ from 'lodash';
 import ListItem from './ListItem';
 
 class EmployeeList extends Component {
+	constructor() {
+		super();
+		this.renderRow = this.renderRow.bind(this)
+	}
 	componentWillMount() {
 		this.props.employeesFetch();
 	
