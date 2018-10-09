@@ -7,11 +7,12 @@ import _ from 'lodash';
 import Communications from 'react-native-communications';
 
 class EmployeeEdit extends Component {
-	consturctor()
+	constructor() {
 	super();
 	this.state = {
 		showModal: false
 	};
+}
 
 	componentWillMount() {
 		_.each(this.props.employee, (value, prop) => {
@@ -83,4 +84,4 @@ const mapStateToProps = (state) => {
 	return { name, phone, shift };
 };
 
-export default connect(mapStateToProps, { employeeUdate, employeeSave, employeeDelete } )(EmployeeEdit);
+export default connect(mapStateToProps, { employeeUpdate, employeeSave, employeeDelete } )(EmployeeEdit);
