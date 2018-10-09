@@ -9,6 +9,8 @@ class EmployeeList extends Component {
 	constructor() {
 		super();
 		this.renderRow = this.renderRow.bind(this)
+		this.createDataSource = this.createDataSource.bind(this)
+		// this.dataSource = this.dataSource.bind(this)
 	}
 	componentWillMount() {
 		this.props.employeesFetch();
@@ -37,12 +39,15 @@ class EmployeeList extends Component {
 
 	render() {
 		return (
+			<View>
+			<Text>Employee List</Text>
 			<ListView
 				enableEmptySections
 				dataSource={this.dataSource}
 				renderRow={this.renderRow}
 
 			/>
+			</View>
 			)
 	}
 };
